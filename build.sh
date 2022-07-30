@@ -2,7 +2,7 @@
 
 # Build my personal Ubuntu distro with Cubic
 #
-# Author: Cristiano Nunes <cfgnunes@gmail.com>
+# Author: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 
 set -eu
 
@@ -26,9 +26,6 @@ deb http://br.archive.ubuntu.com/ubuntu/ jammy-updates main multiverse universe 
 deb http://br.archive.ubuntu.com/ubuntu/ jammy-backports main multiverse universe restricted
 deb http://security.ubuntu.com/ubuntu jammy-security main multiverse universe restricted
 EOF
-
-    _log "Updating packages list..."
-    apt update
 
     _log "Running main scripts..."
     source 20-remove-packages.sh

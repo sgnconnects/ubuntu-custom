@@ -3,7 +3,7 @@ set -eu
 
 # System
 apt -y install p7zip-full
-apt -y install exfat-fuse # for exfat support
+apt -y install exfat-fuse
 
 # GNOME Apps
 #apt -y install kazam
