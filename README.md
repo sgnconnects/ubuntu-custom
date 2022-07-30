@@ -9,5 +9,5 @@ This project is for personal use, but it can help you to personalize your Ubuntu
 Inside Cubic terminal, just run:
 
 ```sh
-    ./build-distro.sh
+    ./build.sh
 ```
