@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Buid my personal Ubuntu distro with Cubic
+# Build my personal Ubuntu distro with Cubic
 #
 # Author: Cristiano Nunes <cfgnunes@gmail.com>
 
