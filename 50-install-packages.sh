@@ -1,89 +1,124 @@
 #!/usr/bin/env bash
 set -eu
 
+_install_package() {
+    local PACKAGE="$1"
+
+    if ! dpkg -s "$PACKAGE" &>/dev/null; then
+        apt-get -y install "$PACKAGE"
+    fi
+}
+
 # System
-apt -y install p7zip-full
-apt -y install exfat-fuse
+_install_package exfat-fuse
+_install_package p7zip-full
+
+# System: install grub package (to work in offline)
+_install_package grub-efi-amd64-bin
 
 # GNOME Apps
-#apt -y install kazam
-apt -y install audacious
-apt -y install brasero cdrdao dvdauthor
-apt -y install gnome-calculator
-apt -y install gnome-characters
-apt -y install gnome-system-monitor
-apt -y install transmission-gtk
-apt -y install xournal
+_install_package audacious
+_install_package brasero
+_install_package cdrdao
+_install_package dvdauthor
+_install_package gnome-calculator
+_install_package gnome-characters
+_install_package gnome-system-monitor
+_install_package transmission-gtk
+_install_package xournal
 
 # Others
-apt -y install ubuntu-restricted-extras
-apt -y install gstreamer1.0-plugins-bad
+_install_package gstreamer1.0-plugins-bad
+_install_package ubuntu-restricted-extras
 
 # Language
-apt -y install aspell-en aspell-pt-br
-apt -y install hunspell-en-us hunspell-pt-br
-apt -y install hyphen-en-us hyphen-pt-br
+_install_package aspell-en
+_install_package aspell-pt-br
+_install_package hunspell-en-us
+_install_package hunspell-pt-br
+_install_package hyphen-en-us
+_install_package hyphen-pt-br
 
 # My workstation only
 
-# System
-apt -y install curl syslinux extlinux wimtools # For bootiso
+# System (For bootiso)
+_install_package curl
+_install_package extlinux
+_install_package syslinux
+_install_package wimtools
 
 # GNOME Apps
-apt -y install audacity
-apt -y install gparted
-apt -y install meld
-apt -y install synaptic
+_install_package audacity
+_install_package gparted
+_install_package meld
+_install_package synaptic
 
 # Graphics
-apt -y install gimp gimp-plugin-registry
-apt -y install inkscape
+_install_package gimp
+_install_package gimp-plugin-registry
+_install_package inkscape
 
 # Utilities
-apt -y install aria2
-apt -y install hexedit
-apt -y install jpegoptim
-apt -y install lm-sensors
-apt -y install parallel
-apt -y install pdfgrep
-apt -y install qpdf
-apt -y install rdfind
-apt -y install tmux
+_install_package aria2
+_install_package hexedit
+_install_package jpegoptim
+_install_package lm-sensors
+_install_package parallel
+_install_package pdfgrep
+_install_package qpdf
+_install_package rdfind
+_install_package tmux
 
 # Forensic
-apt -y install secure-delete
-apt -y install testdisk
+_install_package secure-delete
+_install_package testdisk
 
 # Network
-apt -y install openssh-server
+_install_package openssh-server
 
 # Multimedia
-apt -y install ffmpeg
-apt -y install lame
-apt -y install mediainfo
-apt -y install mp3val
+_install_package ffmpeg
+_install_package lame
+_install_package mediainfo
+_install_package mp3val
 
 # Development
-apt -y install build-essential
-apt -y install clang-format
-apt -y install cmake
-apt -y install devscripts debhelper cdbs
-apt -y install git
+_install_package build-essential
+_install_package cdbs
+_install_package clang-format
+_install_package cmake
+_install_package debhelper
+_install_package devscripts
+_install_package git
 
 # Dev libraries
-apt -y install libwxgtk3.0-gtk3-dev libwxgtk-media3.0-gtk3-dev
-apt -y install freeglut3-dev libsdl2-mixer-dev libsoil-dev libgtk-3-dev
-#apt -y install python3-pip python3-venv
+_install_package freeglut3-dev
+_install_package libgtk-3-dev
+_install_package libsdl2-mixer-dev
+_install_package libsoil-dev
+_install_package libwxgtk-media3.0-gtk3-dev
+_install_package libwxgtk3.0-gtk3-dev
+#_install_package python3-pip
+#_install_package python3-venv
 
 # Network
-apt -y install nmap
+_install_package nmap
 
 # Latex
-apt -y install texlive texlive-latex-extra texlive-science texlive-publishers texlive-lang-portuguese texlive-xetex texlive-extra-utils texlive-fonts-extra latexmk latexdiff
-apt -y install pandoc
+_install_package pandoc
+_install_package texlive
+_install_package texlive-extra-utils
+_install_package texlive-fonts-extra
+_install_package texlive-lang-portuguese
+_install_package texlive-latex-extra
+_install_package texlive-publishers
+_install_package texlive-science
+_install_package texlive-xetex
+_install_package latexdiff
+_install_package latexmk
 
 # VPN
-apt -y install network-manager-fortisslvpn-gnome
+_install_package network-manager-fortisslvpn-gnome
 
 # External
-apt -y install google-chrome-stable
+_install_package google-chrome-stable

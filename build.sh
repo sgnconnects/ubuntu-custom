@@ -35,10 +35,6 @@ EOF
     source 60-clean.sh
     source 70-optimizations.sh
 
-    # Install grub package (to work in offline)
-    _log "Installing grub package..."
-    apt -y install grub-efi-amd64-bin
-
     _log "Setting a 'gnome-mimeapps.list' file..."
     cp gnome-mimeapps.list /usr/share/applications/
     chmod 644 /usr/share/applications/gnome-mimeapps.list
