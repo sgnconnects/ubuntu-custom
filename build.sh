@@ -29,7 +29,7 @@ EOF
 
     _log "Running main scripts..."
     source 20-remove-packages.sh
-    source 30-repositories.sh
+    source 30-add-repositories.sh
     source 40-update-packages.sh
     source 50-install-packages.sh
     source 60-clean.sh

@@ -2,7 +2,7 @@
 set -eu
 
 # Update packages list
-apt update
+apt-get update
 
 # System upgrade
-apt -y full-upgrade
+apt-get -y full-upgrade
