@@ -21,3 +21,6 @@ apt-get -y purge gstreamer1.0-vaapi
 
 # FIX: problem with Canon Scanner in Ubuntu 20.04
 apt-get -y purge ippusbxd
+
+# Remove others packages
+apt-get -y --purge autoremove
