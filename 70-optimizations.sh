@@ -19,8 +19,5 @@ sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/I
 # FIX: the bug in application Totem "The specified movie could not be found."
 apt-get -y purge gstreamer1.0-vaapi
 
-# FIX: problem with Canon Scanner in Ubuntu 20.04
-apt-get -y purge ippusbxd
-
 # Remove others packages
 apt-get -y --purge autoremove
