@@ -60,6 +60,7 @@ _install_package inkscape
 
 # Utilities
 _install_package aria2
+_install_package evtest
 _install_package hexedit
 _install_package jpegoptim
 _install_package lm-sensors
