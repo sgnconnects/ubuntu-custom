@@ -71,6 +71,7 @@ _install_package rdfind
 _install_package tmux
 
 # Forensic
+_install_package foremost
 _install_package secure-delete
 _install_package testdisk
 
