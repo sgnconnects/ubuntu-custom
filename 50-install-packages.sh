@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -eu
 
-_install_package() {
-    local PACKAGE="$1"
+_install_apt() {
+    local PACKAGE=$1
 
     if ! dpkg -s "$PACKAGE" &>/dev/null; then
         apt-get -y install "$PACKAGE"
@@ -10,117 +10,117 @@ _install_package() {
 }
 
 # System
-_install_package exfat-fuse
-_install_package p7zip-full
+_install_apt exfat-fuse
+_install_apt p7zip-full
 
 # System: install grub package (to work in offline)
-_install_package grub-efi-amd64-bin
+_install_apt grub-efi-amd64-bin
 
 # GNOME Apps
-_install_package audacious
-_install_package brasero
-_install_package cdrdao
-_install_package dvdauthor
-_install_package gnome-calculator
-_install_package gnome-characters
-_install_package gnome-system-monitor
-_install_package transmission-gtk
-_install_package xournal
+_install_apt audacious
+_install_apt brasero
+_install_apt cdrdao
+_install_apt dvdauthor
+_install_apt gnome-calculator
+_install_apt gnome-characters
+_install_apt gnome-system-monitor
+_install_apt transmission-gtk
+_install_apt xournal
 
 # Others
-_install_package gstreamer1.0-plugins-bad
-_install_package ubuntu-restricted-extras
+_install_apt gstreamer1.0-plugins-bad
+_install_apt ubuntu-restricted-extras
 
 # Language
-_install_package aspell-en
-_install_package aspell-pt-br
-_install_package hunspell-en-us
-_install_package hunspell-pt-br
-_install_package hyphen-en-us
-_install_package hyphen-pt-br
+_install_apt aspell-en
+_install_apt aspell-pt-br
+_install_apt hunspell-en-us
+_install_apt hunspell-pt-br
+_install_apt hyphen-en-us
+_install_apt hyphen-pt-br
 
 # My workstation only
 
 # System (For bootiso)
-_install_package curl
-_install_package extlinux
-_install_package syslinux
-_install_package wimtools
+_install_apt curl
+_install_apt extlinux
+_install_apt syslinux
+_install_apt wimtools
 
 # GNOME Apps
-_install_package audacity
-_install_package gparted
-_install_package meld
-_install_package synaptic
+_install_apt audacity
+_install_apt gparted
+_install_apt meld
+_install_apt synaptic
 
 # Graphics
-_install_package gimp
-_install_package gimp-plugin-registry
-_install_package inkscape
+_install_apt gimp
+_install_apt gimp-plugin-registry
+_install_apt inkscape
 
 # Utilities
-_install_package aria2
-_install_package evtest
-_install_package hexedit
-_install_package jpegoptim
-_install_package lm-sensors
-_install_package parallel
-_install_package pdfgrep
-_install_package qpdf
-_install_package rdfind
-_install_package tmux
+_install_apt aria2
+_install_apt evtest
+_install_apt hexedit
+_install_apt jpegoptim
+_install_apt lm-sensors
+_install_apt parallel
+_install_apt pdfgrep
+_install_apt qpdf
+_install_apt rdfind
+_install_apt tmux
 
 # Forensic
-_install_package foremost
-_install_package secure-delete
-_install_package testdisk
+_install_apt foremost
+_install_apt secure-delete
+_install_apt testdisk
 
 # Network
-_install_package openssh-server
+_install_apt openssh-server
 
 # Multimedia
-_install_package ffmpeg
-_install_package lame
-_install_package mediainfo
-_install_package mp3val
+_install_apt ffmpeg
+_install_apt lame
+_install_apt mediainfo
+_install_apt mp3val
 
 # Development
-_install_package build-essential
-_install_package cdbs
-_install_package clang-format
-_install_package cmake
-_install_package debhelper
-_install_package devscripts
-_install_package git
+_install_apt build-essential
+_install_apt cdbs
+_install_apt clang-format
+_install_apt cmake
+_install_apt debhelper
+_install_apt devscripts
+_install_apt git
 
 # Dev libraries
-_install_package freeglut3-dev
-_install_package libgtk-3-dev
-_install_package libsdl2-mixer-dev
-_install_package libsoil-dev
-_install_package libwxgtk-media3.0-gtk3-dev
-_install_package libwxgtk3.0-gtk3-dev
-#_install_package python3-pip
-#_install_package python3-venv
+_install_apt freeglut3-dev
+_install_apt libgtk-3-dev
+_install_apt libsdl2-mixer-dev
+_install_apt libsoil-dev
+_install_apt libwxgtk-media3.0-gtk3-dev
+_install_apt libwxgtk3.0-gtk3-dev
+#_install_apt python3-pip
+#_install_apt python3-venv
 
 # Network
-_install_package nmap
+_install_apt nmap
 
 # Latex
-_install_package pandoc
-_install_package texlive
-_install_package texlive-extra-utils
-_install_package texlive-fonts-extra
-_install_package texlive-lang-portuguese
-_install_package texlive-latex-extra
-_install_package texlive-publishers
-_install_package texlive-science
-_install_package texlive-xetex
-_install_package latexdiff
-_install_package latexmk
+_install_apt pandoc
+_install_apt texlive
+_install_apt texlive-extra-utils
+_install_apt texlive-fonts-extra
+_install_apt texlive-lang-portuguese
+_install_apt texlive-latex-extra
+_install_apt texlive-publishers
+_install_apt texlive-science
+_install_apt texlive-xetex
+_install_apt latexdiff
+_install_apt latexmk
 
 # VPN
-_install_package network-manager-fortisslvpn-gnome
+_install_apt network-manager-fortisslvpn-gnome
 
 # External
-_install_package google-chrome-stable
+_install_apt google-chrome-stable
