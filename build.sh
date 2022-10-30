@@ -59,10 +59,10 @@ EOF
 }
 
 _log() {
-    STR_MESSAGE=$1
+    MESSAGE=$1
 
-    #logger -s "[$SCRIPT_NAME] $STR_MESSAGE"
-    echo "[$SCRIPT_NAME] $STR_MESSAGE"
+    #logger -s "[$SCRIPT_NAME] $MESSAGE"
+    echo "[$SCRIPT_NAME] $MESSAGE"
 }
 
 _main "$@"
