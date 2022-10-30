@@ -2,10 +2,10 @@
 set -eu
 
 # Adjust swappiness: uses 90% of RAM before Linux kernel begins swapping
-echo "vm.swappiness=10" >> /etc/sysctl.conf
+echo "vm.swappiness=10" >>/etc/sysctl.conf
 
 # Adjust for VSCode and Insync
-echo "fs.inotify.max_user_watches=1048576" >> /etc/sysctl.conf
+echo "fs.inotify.max_user_watches=1048576" >>/etc/sysctl.conf
 
 # Disable apport
 sed -i "s|enabled=1|enabled=0|" /etc/default/apport
