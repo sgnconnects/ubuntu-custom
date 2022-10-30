@@ -59,7 +59,7 @@ EOF
 }
 
 _log() {
-    MESSAGE=$1
+    local MESSAGE=$1
 
     #logger -s "[$SCRIPT_NAME] $MESSAGE"
     echo "[$SCRIPT_NAME] $MESSAGE"
