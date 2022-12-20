@@ -64,6 +64,7 @@ _install_apt evtest
 _install_apt hexedit
 _install_apt jpegoptim
 _install_apt lm-sensors
+_install_apt optipng
 _install_apt parallel
 _install_apt pdfgrep
 _install_apt qpdf
