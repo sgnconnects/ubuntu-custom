@@ -61,6 +61,7 @@ _install_apt inkscape
 # Utilities
 _install_apt aria2
 _install_apt evtest
+_install_apt findimagedupes
 _install_apt hexedit
 _install_apt jpegoptim
 _install_apt lm-sensors
