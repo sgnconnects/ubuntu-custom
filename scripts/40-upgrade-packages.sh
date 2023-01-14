@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-echo "Upgrade the system..."
+echo "Script: 40-upgrade-packages.sh"
+
+echo " > Upgrade the system..."
 apt-get -y full-upgrade

@@ -16,7 +16,7 @@ _main() {
     source scripts/50-install-packages.sh
     source scripts/60-optimizations.sh
 
-    echo "Setting a 'gnome-mimeapps.list' file..."
+    echo " > Setting a 'gnome-mimeapps.list' file..."
     cp data/gnome-mimeapps.list /usr/share/applications/
     chmod 644 /usr/share/applications/gnome-mimeapps.list
     chown root:root /usr/share/applications/gnome-mimeapps.list

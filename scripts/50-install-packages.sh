@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -eu
 
+echo "Script: 50-install-packages.sh"
+
+echo " > Installing packages..."
+
 _install_apt() {
     local PACKAGE=$1
 
