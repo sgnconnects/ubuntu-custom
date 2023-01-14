@@ -18,6 +18,3 @@ sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/I
 
 # FIX: the bug in application Totem "The specified movie could not be found."
 apt-get -y purge gstreamer1.0-vaapi
-
-# Remove others packages
-apt-get -y --purge autoremove
