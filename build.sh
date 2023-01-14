@@ -12,7 +12,7 @@ _main() {
     source scripts/10-configure.sh
     source scripts/20-remove-packages.sh
     source scripts/30-add-repositories.sh
-    source scripts/40-update-packages.sh
+    source scripts/40-upgrade-packages.sh
     source scripts/50-install-packages.sh
     source scripts/60-optimizations.sh
 
