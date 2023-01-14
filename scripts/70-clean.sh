@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 set -eu
 
-# Clean apt cache
+echo "Clean apt cache..."
 apt-get -y clean
 
-# Remove residual configs
+echo "Remove residual configs..."
 dpkg -l | grep '^rc' | awk '{print $2}' | xargs apt-get -y purge
 
-# Remove others packages
+echo "Remove others packages..."
 apt-get -y --purge autoremove
 
-# Removing logs...
+echo "Removing logs......"
 find /var/log/* -type f -iname "*log" -exec truncate -s 0 {} \;
 find /var/log/* -type f -iname "dmesg" -exec truncate -s 0 {} \;
 find /var/log/* -type f -iname "*\.[0-99]" -delete
@@ -18,7 +18,7 @@ find /var/log/* -type f -iname "*\.gz*" -delete
 find /var/log/* -type f -iname "*\.xz*" -delete
 find /var/log/* -type f -iname "*old" -delete
 
-# Clean 'root' user transient files
+echo "Clean 'root' user transient files..."
 rm -rf /root/.cache
 rm -rf /root/.local
 rm -rf /root/.wget-hsts
