@@ -63,6 +63,7 @@ _install_apt gimp-plugin-registry
 _install_apt inkscape
 
 # Utilities
+_install_apt aptitude
 _install_apt aria2
 _install_apt evtest
 _install_apt findimagedupes
