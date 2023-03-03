@@ -25,4 +25,4 @@ rm -rf /root/.cache
 rm -rf /root/.local
 rm -rf /root/.wget-hsts
 rm -rf /root/snap
-history -c && history -w && rm -rf /root/.bash_history
+history -c && history -w && rm -rf /root/.*history
