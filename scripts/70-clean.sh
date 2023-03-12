@@ -7,7 +7,7 @@ echo " > Clean apt cache..."
 apt-get -y clean
 
 echo " > Remove residual configs..."
-dpkg -l | grep '^rc' | awk '{print $2}' | xargs apt-get -y purge
+dpkg --list | grep '^rc' | awk '{print $2}' | xargs apt-get -y purge
 
 echo " > Remove others packages..."
 apt-get -y --purge autoremove
