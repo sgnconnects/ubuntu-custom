@@ -75,6 +75,7 @@ _install_apt parallel
 _install_apt pdfgrep
 _install_apt qpdf
 _install_apt rdfind
+_install_apt silversearcher-ag
 _install_apt tmux
 
 # Forensic
