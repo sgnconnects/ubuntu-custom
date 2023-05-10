@@ -130,6 +130,3 @@ _install_apt latexmk
 
 # VPN
 _install_apt network-manager-fortisslvpn-gnome
-
-# External
-_install_apt google-chrome-stable
