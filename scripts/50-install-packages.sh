@@ -45,10 +45,10 @@ _install_apt hyphen-pt-br
 
 # My workstation only
 
-# System (For bootiso)
-_install_apt curl
-_install_apt extlinux
-_install_apt syslinux
+# System (For woeusb)
+#_install_apt curl
+#_install_apt extlinux
+#_install_apt syslinux
 _install_apt wimtools
 
 # GNOME Apps
