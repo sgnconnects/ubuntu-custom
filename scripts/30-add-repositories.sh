@@ -7,7 +7,7 @@ echo " > Removing old apt lists..."
 rm -rf /var/lib/apt/lists/*ubuntu_dists*
 
 echo " > Creating new 'sources.list'..."
-CODENAME=$(lsb_release -c | cut -f 2)
+CODENAME=$(lsb_release -cs)
 cat >"/etc/apt/sources.list" <<EOF
 deb http://br.archive.ubuntu.com/ubuntu/ $CODENAME main restricted
 deb http://br.archive.ubuntu.com/ubuntu/ $CODENAME-updates main restricted
