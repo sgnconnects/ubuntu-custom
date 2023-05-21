@@ -22,7 +22,7 @@ _main() {
     chmod 644 /usr/share/applications/gnome-mimeapps.list
     chown root:root /usr/share/applications/gnome-mimeapps.list
 
-    source scripts/70-clean.sh
+    source scripts/90-clean.sh
 
     echo "Done!"
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-echo "Script: 70-clean.sh"
+echo "Script: 90-clean.sh"
 
 echo " > Clean apt cache..."
 apt-get -y clean

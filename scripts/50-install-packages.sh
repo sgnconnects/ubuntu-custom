@@ -46,9 +46,6 @@ _install_apt hyphen-pt-br
 # My workstation only
 
 # System (For woeusb)
-#_install_apt curl
-#_install_apt extlinux
-#_install_apt syslinux
 _install_apt wimtools
 
 # GNOME Apps
@@ -101,16 +98,6 @@ _install_apt cmake
 _install_apt debhelper
 _install_apt devscripts
 _install_apt git
-
-# Dev libraries
-#_install_apt freeglut3-dev
-#_install_apt libgtk-3-dev
-#_install_apt libsdl2-mixer-dev
-#_install_apt libsoil-dev
-#_install_apt libwxgtk-media3.0-gtk3-dev
-#_install_apt libwxgtk3.0-gtk3-dev
-#_install_apt python3-pip
-#_install_apt python3-venv
 
 # Network
 _install_apt nmap
