@@ -1,0 +1,39 @@
+###################
+# global settings #
+###################
+
+[org.gnome.shell]
+favorite-apps = [ 'ubuntu-desktop-installer_ubuntu-desktop-installer.desktop', 'ubiquity.desktop', 'firefox_firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop' ]
+
+[org.gnome.desktop.background]
+picture-uri = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
+picture-uri-dark = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
+
+[org.gnome.desktop.screensaver]
+picture-uri = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
+
+[org.gnome.login-screen]
+logo = '/usr/share/plymouth/ubuntu-logo.png'
+
+[org.gnome.shell.extensions.ding:ubuntu]
+show-trash = false
+show-volumes = false
+
+[org.gnome.desktop.wm.keybindings:ubuntu]
+show-desktop = ['<Primary><Super>d','<Primary><Alt>d','<Super>d']
+switch-applications = ['<Super>Tab']
+switch-windows = ['<Alt>Tab']
+switch-applications-backward = ['<Shift><Super>Tab']
+switch-windows-backward = ['<Shift><Alt>Tab']
+
+##########################
+# unity specific session #
+##########################
+
+[org.gnome.nautilus.desktop:Unity]
+trash-icon-visible = false
+volumes-visible = false
+
+[org.gnome.shell.extensions.dash-to-dock:ubuntu]
+show-mounts-only-mounted = false
+show-mounts-network = true

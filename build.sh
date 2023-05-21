@@ -9,6 +9,7 @@ set -eu
 # shellcheck disable=SC1091
 _main() {
     echo "Running main scripts..."
+
     source scripts/10-configure.sh
     source scripts/20-remove-packages.sh
     source scripts/30-add-repositories.sh
@@ -16,12 +17,7 @@ _main() {
     source scripts/50-install-packages.sh
     source scripts/55-install-packages-external.sh
     source scripts/60-optimizations.sh
-
-    echo " > Setting a 'gnome-mimeapps.list' file..."
-    cp data/gnome-mimeapps.list /usr/share/applications/
-    chmod 644 /usr/share/applications/gnome-mimeapps.list
-    chown root:root /usr/share/applications/gnome-mimeapps.list
-
+    source scripts/80-desktop-settings.sh
     source scripts/90-clean.sh
 
     echo "Done!"
