@@ -3,37 +3,47 @@
 ###################
 
 [org.gnome.shell]
-favorite-apps = [ 'ubuntu-desktop-installer_ubuntu-desktop-installer.desktop', 'ubiquity.desktop', 'firefox_firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop' ]
+favorite-apps = ['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'libreoffice-writer.desktop']
 
 [org.gnome.desktop.background]
-picture-uri = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
-picture-uri-dark = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
+picture-uri = 'file:///usr/share/backgrounds/win-light.jpg'
+picture-uri-dark = 'file:///usr/share/backgrounds/win-dark.jpg'
 
 [org.gnome.desktop.screensaver]
-picture-uri = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
+picture-uri = 'file:///usr/share/backgrounds/win-light.jpg'
 
-[org.gnome.login-screen]
-logo = '/usr/share/plymouth/ubuntu-logo.png'
+[org.gnome.desktop.interface:ubuntu]
+gtk-theme = 'Yaru-blue'
+icon-theme = 'Yaru-blue'
 
 [org.gnome.shell.extensions.ding:ubuntu]
+show-home = false
 show-trash = false
 show-volumes = false
 
 [org.gnome.desktop.wm.keybindings:ubuntu]
-show-desktop = ['<Primary><Super>d','<Primary><Alt>d','<Super>d']
-switch-applications = ['<Super>Tab']
-switch-windows = ['<Alt>Tab']
-switch-applications-backward = ['<Shift><Super>Tab']
-switch-windows-backward = ['<Shift><Alt>Tab']
+close = ['<Alt>F4', '<Super>q']
+toggle-fullscreen = ['<Super>f']
+switch-to-workspace-1 = ['<Super>Home', '<Super>Back', '<Control>Back', 'Menu']
+switch-to-workspace-last = ['<Super>End', '<Super>Forward', '<Control>Forward']
+switch-to-workspace-left = ['<Super>Page_Up',  '<Super><Alt>Left',  '<Control><Alt>Left',  'Back']
+switch-to-workspace-right = ['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right', 'Forward']
+move-to-workspace-left = ['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left', '<Control><Shift><Alt>Left', '<Shift>Back']
+move-to-workspace-right = ['<Super><Shift>Page_Down', '<Super><Shift><Alt>Right', '<Control><Shift><Alt>Right', '<Shift>Forward']
 
-##########################
-# unity specific session #
-##########################
+[org.gnome.settings-daemon.plugins.media-keys]
+terminal = ['<Primary><Alt>t', '<Super>t']
 
-[org.gnome.nautilus.desktop:Unity]
-trash-icon-visible = false
-volumes-visible = false
+[org.gnome.desktop.search-providers]
+disabled = ['org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop']
+
+[org.gnome.desktop.peripherals.touchpad]
+natural-scroll = false
 
 [org.gnome.shell.extensions.dash-to-dock:ubuntu]
-show-mounts-only-mounted = false
-show-mounts-network = true
+#dock-fixed = false
+show-mounts-only-mounted = true
+show-trash = false
+# Redefine '<Super>q' to '<Super>w' (use '<Super>q' to close Windows)
+shortcut = ['<Super>w']
+shortcut-text = '<Super>w'
