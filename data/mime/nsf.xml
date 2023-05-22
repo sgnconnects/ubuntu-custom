@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="audio/x-nsf">
+        <comment>Nintendo Sound File</comment>
+        <glob pattern="*.nsf"/>
+        <magic priority="50">
+            <match value="NESM" type="string" offset="0" />
+        </magic>
+        <icon name="audio-x-generic"/>
+    </mime-type>
+</mime-info>

@@ -13,7 +13,6 @@ install -o root -m 644 data/ubuntu-custom-wallpapers.xml /usr/share/gnome-backgr
 
 echo " > Setting new desktop configuration..."
 install -o root -m 644 data/90_ubuntu-custom.gschema.override /usr/share/glib-2.0/schemas/90_ubuntu-custom.gschema.override
-
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 echo " > Setting app default configs..."
@@ -22,3 +21,7 @@ cp -r data/config/* /etc/skel/.config/
 chmod -R 644 /etc/skel/.config/
 find /etc/skel/.config/ -type f -exec chmod 644 {} \;
 find /etc/skel/.config/ -type d -exec chmod 755 {} \;
+
+echo " > Setting new mime types..."
+install -o root -m 644 data/mime/*.xml /usr/share/mime/packages/
+update-mime-database /usr/share/mime
