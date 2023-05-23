@@ -29,6 +29,12 @@ move-to-workspace-right = ['<Super><Shift>Page_Down', '<Super><Shift><Alt>Right'
 
 [org.gnome.settings-daemon.plugins.media-keys]
 terminal = ['<Primary><Alt>t', '<Super>t']
+home = ['<Primary><Alt>e', '<Super>e']
+next = ['<Alt>End']
+play = ['<Alt>Insert']
+previous = ['<Alt>Home']
+volume-down = ['<Alt>Page_Down']
+volume-up = ['<Alt>Page_Up']
 
 [org.gnome.desktop.search-providers]
 disabled = ['org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop']
@@ -37,9 +43,7 @@ disabled = ['org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.g
 natural-scroll = false
 
 [org.gnome.shell.extensions.dash-to-dock:ubuntu]
-#dock-fixed = false
 show-mounts-only-mounted = true
-#show-trash = false
 # Redefine '<Super>q' to '<Super>w' (use '<Super>q' to close Windows)
 shortcut = ['<Super>w']
 shortcut-text = '<Super>w'
