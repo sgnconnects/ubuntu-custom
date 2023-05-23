@@ -370,6 +370,7 @@ audio/x-speex+ogg=audacious.desktop
 audio/x-speex=audacious.desktop
 audio/x-stm=audacious.desktop
 audio/x-tta=audacious.desktop
+audio/x-vgm=audacious.desktop
 audio/x-voc=audacious.desktop
 audio/x-vorbis+ogg=audacious.desktop
 audio/x-vorbis=audacious.desktop
