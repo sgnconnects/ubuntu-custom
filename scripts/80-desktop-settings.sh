@@ -15,11 +15,11 @@ echo " > Setting new desktop configuration..."
 install -o root -m 644 data/90_ubuntu-custom.gschema.override /usr/share/glib-2.0/schemas/90_ubuntu-custom.gschema.override
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
+echo " > Setting new mime types..."
+install -o root -m 644 data/mime/*.xml /usr/share/mime/packages/
+update-mime-database /usr/share/mime
+
 echo " > Setting app default configs..."
 cp -r data/skel/. /etc/skel/
 find /etc/skel/ -type f -exec chmod 644 {} \;
 find /etc/skel/ -type d -exec chmod 755 {} \;
-
-echo " > Setting new mime types..."
-install -o root -m 644 data/mime/*.xml /usr/share/mime/packages/
-update-mime-database /usr/share/mime
