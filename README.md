@@ -1,4 +1,4 @@
-# Personal Ubuntu Desktop distro
+# Custom Ubuntu Desktop distro
 
 Scripts to build my personal [Ubuntu Desktop](https://ubuntu.com/download/desktop) distro with [Cubic](https://github.com/PJ-Singh-001/Cubic).
 
