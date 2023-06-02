@@ -11,6 +11,12 @@ echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | tee
 apt-get update
 apt-get -y install google-chrome-stable
 
+# Install Visual Studio Code
+wget -q -O - https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/microsoft.gpg
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list >/dev/null
+sudo apt update
+sudo apt install -y code
+
 # Install Cubic
 #apt-add-repository -y ppa:cubic-wizard/release
 #apt-get update
