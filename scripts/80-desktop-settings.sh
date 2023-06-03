@@ -7,7 +7,8 @@ echo "Script: 80-desktop-settings.sh"
 # grep -r "mime-type[ ]*type" | cut -d "=" -f 2 | sed "s|\">||" | sed "s|\"||" | sort --unique
 # on directory /usr/share/mime/packages
 echo " > Setting a 'gnome-mimeapps.list' file..."
-install -o root -m 644 data/gnome-mimeapps.list /usr/share/applications/gnome-mimeapps.list
+install -o root -m 644 data/gnome-mimeapps.list /etc/xdg/mimeapps.list
+update-desktop-database
 
 echo " > Installing new wallpapers..."
 install -o root -m 644 data/win-dark.jpg /usr/share/backgrounds/win-dark.jpg
