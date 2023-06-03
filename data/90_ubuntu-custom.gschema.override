@@ -2,11 +2,11 @@
 favorite-apps = ['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'libreoffice-writer.desktop']
 
 [org.gnome.desktop.background]
-picture-uri = 'file:///usr/share/backgrounds/win-light.jpg'
-picture-uri-dark = 'file:///usr/share/backgrounds/win-dark.jpg'
+picture-uri = 'file:///usr/share/backgrounds/windows-light.jpg'
+picture-uri-dark = 'file:///usr/share/backgrounds/windows-dark.jpg'
 
 [org.gnome.desktop.screensaver]
-picture-uri = 'file:///usr/share/backgrounds/win-light.jpg'
+picture-uri = 'file:///usr/share/backgrounds/windows-light.jpg'
 
 [org.gnome.desktop.interface:ubuntu]
 gtk-theme = 'Yaru-blue'

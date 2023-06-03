@@ -11,8 +11,8 @@ install -o root -m 644 data/mimeapps.list /etc/xdg/mimeapps.list
 update-desktop-database
 
 echo " > Installing new wallpapers..."
-install -o root -m 644 data/win-dark.jpg /usr/share/backgrounds/win-dark.jpg
-install -o root -m 644 data/win-light.jpg /usr/share/backgrounds/win-light.jpg
+install -o root -m 644 data/windows-dark.jpg /usr/share/backgrounds/windows-dark.jpg
+install -o root -m 644 data/windows-light.jpg /usr/share/backgrounds/windows-light.jpg
 install -o root -m 644 data/ubuntu-custom-wallpapers.xml /usr/share/gnome-background-properties/ubuntu-custom-wallpapers.xml
 
 echo " > Setting new desktop configuration..."

@@ -3,7 +3,7 @@
 <wallpapers>
  <wallpaper>
      <name>Windows Light</name>
-     <filename>/usr/share/backgrounds/win-light.jpg</filename>
+     <filename>/usr/share/backgrounds/windows-light.jpg</filename>
      <options>zoom</options>
      <pcolor>#000000</pcolor>
      <scolor>#000000</scolor>
@@ -11,7 +11,7 @@
  </wallpaper>
  <wallpaper>
      <name>Windows Dark</name>
-     <filename>/usr/share/backgrounds/win-dark.jpg</filename>
+     <filename>/usr/share/backgrounds/windows-dark.jpg</filename>
      <options>zoom</options>
      <pcolor>#000000</pcolor>
      <scolor>#000000</scolor>
