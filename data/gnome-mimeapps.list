@@ -323,6 +323,7 @@ image/jpeg=gimp.desktop;
 image/png=gimp.desktop;
 image/tiff=gimp.desktop;
 image/x-canon-cr2=gimp.desktop;
+inode/directory=org.gnome.baobab.desktop;
 
 [Removed Associations]
 application/pdf=display-im6.q16.desktop;gimp.desktop;google-chrome.desktop;
