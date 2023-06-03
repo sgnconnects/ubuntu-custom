@@ -1,0 +1,9 @@
+﻿[qt]
+qt-privacy-ask=0
+
+[freetype]
+freetype-font=DejaVu Sans
+
+[core]
+video-title-show=0
+one-instance=1
