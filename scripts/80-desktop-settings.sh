@@ -4,8 +4,7 @@ set -eu
 echo "Script: 80-desktop-settings.sh"
 
 # Configuration based on:
-# grep -r "mime-type[ ]*type" | cut -d "=" -f 2 | sed "s|\">||" | sed "s|\"||" | sort --unique
-# on directory /usr/share/mime/packages
+# grep -r "mime-type[ ]*type" /usr/share/mime/packages | cut -d "=" -f 2 | sed "s|\">||" | sed "s|\"||" | sort --unique
 echo " > Setting mimeapps file..."
 install -o root -m 644 data/mimeapps.list /etc/xdg/mimeapps.list
 update-desktop-database
