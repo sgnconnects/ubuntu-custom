@@ -3,6 +3,9 @@ set -eu
 
 echo "Script: 80-desktop-settings.sh"
 
+# Configuration based on:
+# grep -r "mime-type[ ]*type" | cut -d "=" -f 2 | sed "s|\">||" | sed "s|\"||" | sort --unique
+# on directory /usr/share/mime/packages
 echo " > Setting a 'gnome-mimeapps.list' file..."
 install -o root -m 644 data/gnome-mimeapps.list /usr/share/applications/gnome-mimeapps.list
 
