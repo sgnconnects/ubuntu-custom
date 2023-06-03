@@ -54,17 +54,21 @@ _install_apt mp3val
 
 # Development
 _install_apt build-essential
-_install_apt cdbs
 _install_apt clang-format
 _install_apt cmake
-_install_apt debhelper
-_install_apt devscripts
 _install_apt git
+
+# Development (Debian)
+#_install_apt cdbs
+#_install_apt debhelper
+#_install_apt devscripts
 
 # Network
 _install_apt nmap
 
 # Latex
+_install_apt latexdiff
+_install_apt latexmk
 _install_apt pandoc
 _install_apt texlive
 _install_apt texlive-extra-utils
@@ -74,8 +78,6 @@ _install_apt texlive-latex-extra
 _install_apt texlive-publishers
 _install_apt texlive-science
 _install_apt texlive-xetex
-_install_apt latexdiff
-_install_apt latexmk
 
 # VPN
 _install_apt network-manager-fortisslvpn-gnome
