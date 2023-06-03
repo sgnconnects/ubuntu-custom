@@ -31,6 +31,9 @@ _install_apt gnome-system-monitor
 _install_apt transmission-gtk
 _install_apt xournal
 
+# Multimedia
+_install_apt vlc
+
 # Graphics
 _install_apt gimp
 _install_apt gimp-plugin-registry

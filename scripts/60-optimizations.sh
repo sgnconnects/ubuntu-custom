@@ -17,6 +17,3 @@ sed -i "s|#DefaultTimeoutStopSec=90s|DefaultTimeoutStopSec=10s|" /etc/systemd/sy
 
 echo " > FIX: write permission with PDF in ImageMagick..."
 sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
-
-echo " > FIX: the bug in application Totem 'The specified movie could not be found.'..."
-apt-get -y purge gstreamer1.0-vaapi
