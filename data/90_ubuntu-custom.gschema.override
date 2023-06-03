@@ -62,6 +62,3 @@ sources = [('xkb', 'br'), ('xkb', 'us')]
 
 [org.gnome.libgnomekbd.keyboard]
 layouts = ['br', 'us']
-
-[org.gnome.desktop.media-handling]
-autorun-x-content-start-app = ['x-content/unix-software', 'x-content/ostree-repository', 'x-content/blank-bd', 'x-content/blank-cd', 'x-content/blank-dvd', 'x-content/blank-hddvd', 'x-content/video-dvd', 'x-content/video-svcd', 'x-content/video-vcd', 'x-content/audio-dvd', 'x-content/video-bluray', 'x-content/video-hddvd', 'x-content/audio-player']
