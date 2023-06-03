@@ -54,3 +54,10 @@ sleep-inactive-ac-timeout = 1800
 sleep-inactive-ac-type = 'suspend'
 sleep-inactive-battery-timeout = 900
 sleep-inactive-battery-type = 'suspend'
+
+[org.gnome.desktop.input-sources]
+sources = [('xkb', 'br'), ('xkb', 'us')]
+mru-sources = [('xkb', 'br'), ('xkb', 'us')]
+
+[org.gnome.libgnomekbd.keyboard]
+layouts = ['br', 'us']
