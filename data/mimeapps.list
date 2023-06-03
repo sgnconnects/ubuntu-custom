@@ -124,6 +124,7 @@ audio/x-wavpack=audacious.desktop
 audio/x-xi=audacious.desktop
 audio/x-xm=audacious.desktop
 audio/x-xmf=audacious.desktop
+font/collection=org.gnome.font-viewer.desktop
 image/bmp=org.gnome.eog.desktop
 image/gif=org.gnome.eog.desktop
 image/jpeg=org.gnome.eog.desktop
