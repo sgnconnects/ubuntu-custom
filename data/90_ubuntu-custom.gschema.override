@@ -44,6 +44,7 @@ disabled = ['org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.g
 natural-scroll = false
 
 [org.gnome.shell.extensions.dash-to-dock:ubuntu]
+dock-fixed = false
 show-mounts-only-mounted = true
 # Redefine '<Super>q' to '<Super>w' (use '<Super>q' to close Windows)
 shortcut = ['<Super>w']
@@ -56,8 +57,8 @@ sleep-inactive-battery-timeout = 900
 sleep-inactive-battery-type = 'suspend'
 
 [org.gnome.desktop.input-sources]
-sources = [('xkb', 'br'), ('xkb', 'us')]
 mru-sources = [('xkb', 'br'), ('xkb', 'us')]
+sources = [('xkb', 'br'), ('xkb', 'us')]
 
 [org.gnome.libgnomekbd.keyboard]
 layouts = ['br', 'us']
