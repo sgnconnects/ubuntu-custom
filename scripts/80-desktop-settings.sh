@@ -14,6 +14,13 @@ install -o root -m 644 data/windows-dark.jpg /usr/share/backgrounds/windows-dark
 install -o root -m 644 data/windows-light.jpg /usr/share/backgrounds/windows-light.jpg
 install -o root -m 644 data/windows-wallpapers.xml /usr/share/gnome-background-properties/windows-wallpapers.xml
 
+if [[ -d "data/microsoft-core-fonts" ]]; then
+    echo " > Installing Microsoft core fonts..."
+    mkdir -p /usr/share/fonts/truetype/microsoft-core-fonts
+    cp -r data/microsoft-core-fonts/* /usr/share/fonts/truetype/microsoft-core-fonts
+    chmod 644 /usr/share/fonts/truetype/microsoft-core-fonts/*
+fi
+
 echo " > Setting desktop configuration..."
 install -o root -m 644 data/90_ubuntu-custom.gschema.override /usr/share/glib-2.0/schemas/90_ubuntu-custom.gschema.override
 glib-compile-schemas /usr/share/glib-2.0/schemas

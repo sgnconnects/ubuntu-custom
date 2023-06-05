@@ -16,12 +16,12 @@ _install_apt() {
 # System
 _install_apt exfat-fuse
 _install_apt p7zip-full
+_install_apt unrar
 
 # System: install grub package (to work in offline)
 _install_apt grub-efi-amd64-bin
 
 # GNOME Apps
-_install_apt audacious
 _install_apt brasero
 _install_apt cdrdao
 _install_apt dvdauthor
@@ -31,17 +31,19 @@ _install_apt gnome-system-monitor
 _install_apt transmission-gtk
 _install_apt xournal
 
-# Multimedia
-_install_apt vlc
-
 # Graphics
 _install_apt gimp
 _install_apt gimp-plugin-registry
 _install_apt inkscape
 
-# Others
+# Multimedia
+_install_apt audacious
+_install_apt vlc
+
+# Codecs
 _install_apt gstreamer1.0-plugins-bad
-_install_apt ubuntu-restricted-extras
+_install_apt libavcodec-extra
+_install_apt ubuntu-restricted-addons
 
 # Language
 _install_apt aspell-en
