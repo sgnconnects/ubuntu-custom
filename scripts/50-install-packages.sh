@@ -15,6 +15,7 @@ _install_apt() {
 
 # System
 _install_apt exfat-fuse
+_install_apt lvm2
 _install_apt p7zip-full
 _install_apt unrar
 
