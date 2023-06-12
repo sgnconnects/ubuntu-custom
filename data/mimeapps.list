@@ -150,7 +150,6 @@ text/csv-schema=org.gnome.gedit.desktop
 text/csv=org.gnome.gedit.desktop
 text/enriched=org.gnome.gedit.desktop
 text/html=google-chrome.desktop
-text/htmlh=oogle-chrome.desktop
 text/markdown=org.gnome.gedit.desktop
 text/plain=org.gnome.gedit.desktop
 text/rfc822-headers=org.gnome.gedit.desktop
@@ -315,6 +314,10 @@ x-content/video-dvd=vlc.desktop
 x-content/video-hddvd=vlc.desktop
 x-content/video-svcd=vlc.desktop
 x-content/video-vcd=vlc.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
 
 [Added Associations]
 application/pdf=org.inkscape.Inkscape.desktop;xournal.desktop;
