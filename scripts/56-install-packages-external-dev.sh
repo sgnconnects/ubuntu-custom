@@ -14,4 +14,4 @@ apt-get install -y code
 # Install Cubic
 #apt-add-repository -y ppa:cubic-wizard/release
 #apt-get update
-#apt-get -y install cubic
+#apt-get -y --no-install-recommends install cubic
