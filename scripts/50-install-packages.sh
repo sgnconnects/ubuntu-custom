@@ -15,21 +15,13 @@ _install_apt() {
 
 # System
 _install_apt exfat-fuse
-_install_apt lvm2
 _install_apt p7zip-full
 _install_apt unrar
-
-# System: install grub package (to work in offline)
-_install_apt grub-efi-amd64-bin
 
 # GNOME Apps
 _install_apt brasero
 _install_apt cdrdao
 _install_apt dvdauthor
-_install_apt gnome-calculator
-_install_apt gnome-characters
-_install_apt gnome-system-monitor
-_install_apt transmission-gtk
 _install_apt xournal
 
 # Graphics
