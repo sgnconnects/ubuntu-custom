@@ -24,8 +24,8 @@ echo " > Removing temporary files..."
 find /tmp/ -mindepth 1 -delete
 
 echo " > Clean 'root' user transient files..."
-rm -f /root/.cache
-rm -f /root/.local
-rm -f /root/.wget-hsts
+rm -rf /root/.cache
+rm -rf /root/.local
+rm -rf /root/.wget-hsts
 rm -rf /root/snap
-history -c && history -w && rm -f /root/.*history
+history -c && history -w && rm -rf /root/.*history
