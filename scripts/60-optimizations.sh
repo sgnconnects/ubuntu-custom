@@ -13,7 +13,10 @@ echo " > Disable apport..."
 sed -i "s|enabled=1|enabled=0|" /etc/default/apport
 
 echo " > FIX: shutdown timeout..."
-sed -i "s|#DefaultTimeoutStopSec=90s|DefaultTimeoutStopSec=10s|" /etc/systemd/system.conf
+sed -i "s|^[ #]*DefaultTimeoutStopSec=90s|DefaultTimeoutStopSec=10s|" /etc/systemd/system.conf
 
 echo " > FIX: write permission with PDF in ImageMagick..."
 sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
+
+echo " > FIX: use Wayland in GDM..."
+sed -i "s|^[ #]*WaylandEnable=false|WaylandEnable=true|" /etc/gdm3/custom.conf
