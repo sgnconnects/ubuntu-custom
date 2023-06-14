@@ -13,9 +13,6 @@ _install_apt() {
     fi
 }
 
-# System (For woeusb)
-_install_apt wimtools
-
 # GNOME Apps
 _install_apt audacity
 _install_apt meld
@@ -57,11 +54,6 @@ _install_apt build-essential
 _install_apt clang-format
 _install_apt cmake
 _install_apt git
-
-# Development (Debian)
-#_install_apt cdbs
-#_install_apt debhelper
-#_install_apt devscripts
 
 # Network
 _install_apt nmap
