@@ -18,6 +18,7 @@ show-trash = false
 show-volumes = false
 
 [org.gnome.desktop.wm.keybindings:ubuntu]
+close = ['<Alt>F4', '<Super>w']
 toggle-fullscreen = ['<Super>f']
 switch-to-workspace-1 = ['<Super>Home', '<Super>Back', '<Control>Back', 'Menu']
 switch-to-workspace-last = ['<Super>End', '<Super>Forward', '<Control>Forward']
