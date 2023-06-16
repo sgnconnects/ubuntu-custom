@@ -20,3 +20,6 @@ sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/I
 
 echo " > FIX: use Wayland in GDM..."
 sed -i "s|^[ #]*WaylandEnable=false|WaylandEnable=true|" /etc/gdm3/custom.conf
+
+echo " > FIX: better typing in Portuguese (Brazil) using US keyboards: double quote key..."
+sed -i "s|dead_acute,[ ]*dead_diaeresis,[ ]*apostrophe,[ ]*quotedbl|dead_acute, quotedbl|" /usr/share/X11/xkb/symbols/us
