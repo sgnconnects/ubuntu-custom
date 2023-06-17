@@ -18,7 +18,7 @@ _main() {
     source scripts/51-install-packages-dev.sh
     source scripts/55-install-packages-external.sh
     source scripts/56-install-packages-external-dev.sh
-    source scripts/60-optimizations.sh
+    source scripts/60-tweaks.sh
     source scripts/80-desktop-settings.sh
     source scripts/90-clean.sh
 
