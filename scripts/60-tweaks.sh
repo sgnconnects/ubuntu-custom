@@ -24,5 +24,5 @@ sed -i "s|^[ #]*WaylandEnable=false|WaylandEnable=true|" /etc/gdm3/custom.conf
 echo " > Region and language: Setting locale file for Portuguese (Brazil)..."
 install -o root -m 644 data/locale /etc/default/locale
 
-echo " > Region and language: typing in Portuguese (Brazil) using US keyboards: double quote key..."
+echo " > Region and language: typing in Portuguese (Brazil) using US international keyboard: double quote key..."
 sed -i "s|dead_acute,[ ]*dead_diaeresis,[ ]*apostrophe,[ ]*quotedbl|dead_acute, quotedbl|" /usr/share/X11/xkb/symbols/us
