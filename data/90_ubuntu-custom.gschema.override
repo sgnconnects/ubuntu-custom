@@ -1,3 +1,7 @@
+###################
+# global settings #
+###################
+
 [org.gnome.shell]
 favorite-apps = ['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'libreoffice-writer.desktop']
 
@@ -7,6 +11,44 @@ picture-uri-dark = 'file:///usr/share/backgrounds/windows-dark.jpg'
 
 [org.gnome.desktop.screensaver]
 picture-uri = 'file:///usr/share/backgrounds/windows-light.jpg'
+
+[org.gnome.settings-daemon.plugins.media-keys]
+terminal = ['<Primary><Alt>t', '<Super>t']
+home = ['<Primary><Alt>e', '<Super>e']
+media = ['<Primary>Insert']
+next = ['<Primary>End']
+play = ['<Primary>Delete']
+previous = ['<Primary>Home']
+volume-down = ['<Primary>Page_Down']
+volume-up = ['<Primary>Page_Up']
+
+[org.gnome.desktop.search-providers]
+disabled = ['org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop']
+
+[org.gnome.desktop.peripherals.touchpad]
+natural-scroll = false
+
+[org.gnome.settings-daemon.plugins.power]
+sleep-inactive-battery-timeout = 900
+sleep-inactive-battery-type = 'suspend'
+
+[org.gnome.desktop.input-sources]
+mru-sources = [('xkb', 'br'), ('xkb', 'us+intl')]
+sources = [('xkb', 'br'), ('xkb', 'us+intl')]
+
+[org.gnome.libgnomekbd.keyboard]
+layouts = ['br', 'us+intl']
+
+[org.gnome.settings-daemon.plugins.xsettings]
+overrides = {'Gtk/IMModule': <'ibus'>}
+
+##################################
+# ubuntu common session settings #
+##################################
+
+[org.gnome.shell.extensions.dash-to-dock:ubuntu]
+dock-fixed = false
+show-mounts-only-mounted = true
 
 [org.gnome.desktop.interface:ubuntu]
 gtk-theme = 'Yaru-blue'
@@ -26,37 +68,3 @@ switch-to-workspace-left = ['<Super>Page_Up',  '<Super><Alt>Left',  '<Control><A
 switch-to-workspace-right = ['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right', 'Forward']
 move-to-workspace-left = ['<Super><Shift>Page_Up', '<Super><Shift><Alt>Left', '<Control><Shift><Alt>Left', '<Shift>Back']
 move-to-workspace-right = ['<Super><Shift>Page_Down', '<Super><Shift><Alt>Right', '<Control><Shift><Alt>Right', '<Shift>Forward']
-
-[org.gnome.settings-daemon.plugins.media-keys]
-terminal = ['<Primary><Alt>t', '<Super>t']
-home = ['<Primary><Alt>e', '<Super>e']
-media = ['<Primary>Insert']
-next = ['<Primary>End']
-play = ['<Primary>Delete']
-previous = ['<Primary>Home']
-volume-down = ['<Primary>Page_Down']
-volume-up = ['<Primary>Page_Up']
-
-[org.gnome.desktop.search-providers]
-disabled = ['org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop']
-
-[org.gnome.desktop.peripherals.touchpad]
-natural-scroll = false
-
-[org.gnome.shell.extensions.dash-to-dock:ubuntu]
-dock-fixed = false
-show-mounts-only-mounted = true
-
-[org.gnome.settings-daemon.plugins.power]
-sleep-inactive-battery-timeout = 900
-sleep-inactive-battery-type = 'suspend'
-
-[org.gnome.desktop.input-sources]
-mru-sources = [('xkb', 'br'), ('xkb', 'us+intl')]
-sources = [('xkb', 'br'), ('xkb', 'us+intl')]
-
-[org.gnome.libgnomekbd.keyboard]
-layouts = ['br', 'us+intl']
-
-[org.gnome.settings-daemon.plugins.xsettings]
-overrides = {'Gtk/IMModule': <'ibus'>}
