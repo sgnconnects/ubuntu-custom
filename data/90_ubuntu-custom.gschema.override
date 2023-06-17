@@ -57,3 +57,6 @@ sources = [('xkb', 'br'), ('xkb', 'us+intl')]
 
 [org.gnome.libgnomekbd.keyboard]
 layouts = ['br', 'us+intl']
+
+[org.gnome.settings-daemon.plugins.xsettings]
+overrides = {'Gtk/IMModule': <'ibus'>}
