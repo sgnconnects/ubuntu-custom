@@ -3,5 +3,5 @@ set -eu
 
 echo "Script: 10-configure.sh"
 
-echo " > Setting the time zone..."
+echo " > Region and language: time zone..."
 dpkg-reconfigure tzdata

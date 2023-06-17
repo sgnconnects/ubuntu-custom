@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-echo "Script: 60-optimizations.sh"
+echo "Script: 60-tweaks.sh"
 
 echo " > Adjust swappiness: uses 90% of RAM before Linux kernel begins swapping..."
 echo "vm.swappiness=10" >>/etc/sysctl.conf
@@ -21,5 +21,8 @@ sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/I
 echo " > FIX: use Wayland in GDM..."
 sed -i "s|^[ #]*WaylandEnable=false|WaylandEnable=true|" /etc/gdm3/custom.conf
 
-echo " > FIX: typing in Portuguese (Brazil) using US keyboards: double quote key..."
+echo " > Region and language: Setting locale file for Portuguese (Brazil)..."
+install -o root -m 644 data/locale /etc/default/locale
+
+echo " > Region and language: typing in Portuguese (Brazil) using US keyboards: double quote key..."
 sed -i "s|dead_acute,[ ]*dead_diaeresis,[ ]*apostrophe,[ ]*quotedbl|dead_acute, quotedbl|" /usr/share/X11/xkb/symbols/us
