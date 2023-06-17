@@ -37,11 +37,3 @@ _install_apt vlc
 _install_apt gstreamer1.0-plugins-bad
 _install_apt libavcodec-extra
 _install_apt ubuntu-restricted-addons
-
-# Language
-_install_apt hunspell-en-us
-_install_apt hunspell-pt-br
-_install_apt hyphen-en-us
-_install_apt hyphen-pt-br
-_install_apt wamerican
-_install_apt wbrazilian
