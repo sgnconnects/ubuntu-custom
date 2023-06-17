@@ -4,10 +4,117 @@ set -eu
 echo "Script: 20-remove-packages.sh"
 
 echo " > Remove unused packages..."
-apt-get -y purge firefox
-apt-get -y purge rhythmbox
-apt-get -y purge thunderbird
-apt-get -y purge totem
+apt-get purge firefox
+apt-get purge rhythmbox
+apt-get purge thunderbird
+apt-get purge totem
+
+# From the file: casper/filesystem.manifest-remove
+echo " > Remove language packages (reduce iso size)..."
+apt-get purge gnome-user-docs-de
+apt-get purge gnome-user-docs-es
+apt-get purge gnome-user-docs-fr
+apt-get purge gnome-user-docs-it
+#apt-get purge gnome-user-docs-pt
+apt-get purge gnome-user-docs-ru
+apt-get purge gnome-user-docs-zh-hans
+apt-get purge hunspell-de-at-frami
+apt-get purge hunspell-de-ch-frami
+apt-get purge hunspell-de-de-frami
+apt-get purge hunspell-en-au
+apt-get purge hunspell-en-ca
+apt-get purge hunspell-en-gb
+apt-get purge hunspell-en-za
+apt-get purge hunspell-es
+apt-get purge hunspell-fr
+apt-get purge hunspell-fr-classical
+apt-get purge hunspell-it
+#apt-get purge hunspell-pt-br
+#apt-get purge hunspell-pt-pt
+apt-get purge hunspell-ru
+apt-get purge hyphen-de
+apt-get purge hyphen-en-ca
+apt-get purge hyphen-en-gb
+#apt-get purge hyphen-en-us
+apt-get purge hyphen-es
+apt-get purge hyphen-fr
+apt-get purge hyphen-it
+#apt-get purge hyphen-pt-br
+#apt-get purge hyphen-pt-pt
+apt-get purge hyphen-ru
+apt-get purge language-pack-de
+apt-get purge language-pack-de-base
+#apt-get purge language-pack-en
+#apt-get purge language-pack-en-base
+apt-get purge language-pack-es
+apt-get purge language-pack-es-base
+apt-get purge language-pack-fr
+apt-get purge language-pack-fr-base
+apt-get purge language-pack-gnome-de
+apt-get purge language-pack-gnome-de-base
+#apt-get purge language-pack-gnome-en
+#apt-get purge language-pack-gnome-en-base
+apt-get purge language-pack-gnome-es
+apt-get purge language-pack-gnome-es-base
+apt-get purge language-pack-gnome-fr
+apt-get purge language-pack-gnome-fr-base
+apt-get purge language-pack-gnome-it
+apt-get purge language-pack-gnome-it-base
+#apt-get purge language-pack-gnome-pt
+#apt-get purge language-pack-gnome-pt-base
+apt-get purge language-pack-gnome-ru
+apt-get purge language-pack-gnome-ru-base
+apt-get purge language-pack-gnome-zh-hans
+apt-get purge language-pack-gnome-zh-hans-base
+apt-get purge language-pack-it
+apt-get purge language-pack-it-base
+#apt-get purge language-pack-pt
+#apt-get purge language-pack-pt-base
+apt-get purge language-pack-ru
+apt-get purge language-pack-ru-base
+apt-get purge language-pack-zh-hans
+apt-get purge language-pack-zh-hans-base
+#apt-get purge libreoffice-help-common
+apt-get purge libreoffice-help-de
+apt-get purge libreoffice-help-en-gb
+#apt-get purge libreoffice-help-en-us
+apt-get purge libreoffice-help-es
+apt-get purge libreoffice-help-fr
+apt-get purge libreoffice-help-it
+#apt-get purge libreoffice-help-pt
+#apt-get purge libreoffice-help-pt-br
+apt-get purge libreoffice-help-ru
+apt-get purge libreoffice-help-zh-cn
+apt-get purge libreoffice-help-zh-tw
+apt-get purge libreoffice-l10n-de
+apt-get purge libreoffice-l10n-en-gb
+apt-get purge libreoffice-l10n-en-za
+apt-get purge libreoffice-l10n-es
+apt-get purge libreoffice-l10n-fr
+apt-get purge libreoffice-l10n-it
+#apt-get purge libreoffice-l10n-pt
+#apt-get purge libreoffice-l10n-pt-br
+apt-get purge libreoffice-l10n-ru
+apt-get purge libreoffice-l10n-zh-cn
+apt-get purge libreoffice-l10n-zh-tw
+apt-get purge mythes-de
+apt-get purge mythes-de-ch
+apt-get purge mythes-en-au
+#apt-get purge mythes-en-us
+apt-get purge mythes-es
+apt-get purge mythes-fr
+apt-get purge mythes-it
+#apt-get purge mythes-pt-pt
+apt-get purge mythes-ru
+#apt-get purge wbrazilian
+#apt-get purge wbritish
+apt-get purge wfrench
+apt-get purge witalian
+apt-get purge wngerman
+apt-get purge wogerman
+#apt-get purge wportuguese
+apt-get purge wspanish
+apt-get purge wswiss
 
 echo " > Remove others packages..."
-apt-get -y --purge autoremove
+apt-get --purge autoremove

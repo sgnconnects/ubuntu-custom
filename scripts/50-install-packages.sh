@@ -9,7 +9,7 @@ _install_apt() {
     local PACKAGE=$1
 
     if ! dpkg -s "$PACKAGE" &>/dev/null; then
-        apt-get -y install "$PACKAGE"
+        "$PACKAGE"
     fi
 }
 
@@ -39,9 +39,10 @@ _install_apt libavcodec-extra
 _install_apt ubuntu-restricted-addons
 
 # Language
-_install_apt aspell-en
-_install_apt aspell-pt-br
 _install_apt hunspell-en-us
 _install_apt hunspell-pt-br
 _install_apt hyphen-en-us
 _install_apt hyphen-pt-br
+_install_apt wamerican
+_install_apt wbrazilian
+_install_apt wbritish
