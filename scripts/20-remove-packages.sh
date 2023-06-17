@@ -115,7 +115,7 @@ _purge_apt mythes-it
 #_purge_apt mythes-pt-pt
 _purge_apt mythes-ru
 #_purge_apt wbrazilian
-#_purge_apt wbritish
+_purge_apt wbritish
 _purge_apt wfrench
 _purge_apt witalian
 _purge_apt wngerman
