@@ -23,7 +23,3 @@ sed -i "s|^[ #]*WaylandEnable=false|WaylandEnable=true|" /etc/gdm3/custom.conf
 
 echo " > FIX: typing in Portuguese (Brazil) using US keyboards: double quote key..."
 sed -i "s|dead_acute,[ ]*dead_diaeresis,[ ]*apostrophe,[ ]*quotedbl|dead_acute, quotedbl|" /usr/share/X11/xkb/symbols/us
-
-echo " > FIX: typing in Portuguese (Brazil) using US keyboards: cedilla..."
-sed -i "s|ć|ç|g" /usr/share/X11/locale/en_US.UTF-8/Compose
-sed -i "s|Ć|Ç|g" /usr/share/X11/locale/en_US.UTF-8/Compose
