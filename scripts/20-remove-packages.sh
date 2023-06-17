@@ -29,10 +29,10 @@ _purge_apt gnome-user-docs-zh-hans
 _purge_apt hunspell-de-at-frami
 _purge_apt hunspell-de-ch-frami
 _purge_apt hunspell-de-de-frami
-_purge_apt hunspell-en-au
-_purge_apt hunspell-en-ca
-_purge_apt hunspell-en-gb
-_purge_apt hunspell-en-za
+#_purge_apt hunspell-en-au
+#_purge_apt hunspell-en-ca
+#_purge_apt hunspell-en-gb
+#_purge_apt hunspell-en-za
 _purge_apt hunspell-es
 _purge_apt hunspell-fr
 _purge_apt hunspell-fr-classical
@@ -41,8 +41,8 @@ _purge_apt hunspell-it
 #_purge_apt hunspell-pt-pt
 _purge_apt hunspell-ru
 _purge_apt hyphen-de
-_purge_apt hyphen-en-ca
-_purge_apt hyphen-en-gb
+#_purge_apt hyphen-en-ca
+#_purge_apt hyphen-en-gb
 #_purge_apt hyphen-en-us
 _purge_apt hyphen-es
 _purge_apt hyphen-fr
@@ -84,7 +84,7 @@ _purge_apt language-pack-zh-hans
 _purge_apt language-pack-zh-hans-base
 #_purge_apt libreoffice-help-common
 _purge_apt libreoffice-help-de
-_purge_apt libreoffice-help-en-gb
+#_purge_apt libreoffice-help-en-gb
 #_purge_apt libreoffice-help-en-us
 _purge_apt libreoffice-help-es
 _purge_apt libreoffice-help-fr
@@ -95,8 +95,8 @@ _purge_apt libreoffice-help-ru
 _purge_apt libreoffice-help-zh-cn
 _purge_apt libreoffice-help-zh-tw
 _purge_apt libreoffice-l10n-de
-_purge_apt libreoffice-l10n-en-gb
-_purge_apt libreoffice-l10n-en-za
+#_purge_apt libreoffice-l10n-en-gb
+#_purge_apt libreoffice-l10n-en-za
 _purge_apt libreoffice-l10n-es
 _purge_apt libreoffice-l10n-fr
 _purge_apt libreoffice-l10n-it
@@ -107,7 +107,7 @@ _purge_apt libreoffice-l10n-zh-cn
 _purge_apt libreoffice-l10n-zh-tw
 _purge_apt mythes-de
 _purge_apt mythes-de-ch
-_purge_apt mythes-en-au
+#_purge_apt mythes-en-au
 #_purge_apt mythes-en-us
 _purge_apt mythes-es
 _purge_apt mythes-fr
@@ -115,7 +115,7 @@ _purge_apt mythes-it
 #_purge_apt mythes-pt-pt
 _purge_apt mythes-ru
 #_purge_apt wbrazilian
-_purge_apt wbritish
+#_purge_apt wbritish
 _purge_apt wfrench
 _purge_apt witalian
 _purge_apt wngerman
