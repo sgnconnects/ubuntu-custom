@@ -71,13 +71,5 @@ _install_apt texlive-publishers
 _install_apt texlive-science
 _install_apt texlive-xetex
 
-# Language
-_install_apt hunspell-en-us
-_install_apt hunspell-pt-br
-_install_apt hyphen-en-us
-_install_apt hyphen-pt-br
-_install_apt wamerican
-_install_apt wbrazilian
-
 # VPN
 _install_apt network-manager-fortisslvpn-gnome
