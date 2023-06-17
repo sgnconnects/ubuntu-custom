@@ -9,7 +9,7 @@ _install_apt() {
     local PACKAGE=$1
 
     if ! dpkg -s "$PACKAGE" &>/dev/null; then
-        "$PACKAGE"
+        apt-get -y install "$PACKAGE"
     fi
 }
 

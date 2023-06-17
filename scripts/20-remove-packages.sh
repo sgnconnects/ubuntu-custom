@@ -3,118 +3,126 @@ set -eu
 
 echo "Script: 20-remove-packages.sh"
 
+_purge_apt() {
+    local PACKAGE=$1
+
+    if dpkg -s "$PACKAGE" &>/dev/null; then
+        apt-get -y purge "$PACKAGE"
+    fi
+}
+
 echo " > Remove unused packages..."
-apt-get -y purge firefox || true
-apt-get -y purge rhythmbox || true
-apt-get -y purge thunderbird || true
-apt-get -y purge totem || true
+_purge_apt firefox
+_purge_apt rhythmbox
+_purge_apt thunderbird
+_purge_apt totem
 
 # From the file: casper/filesystem.manifest-remove
 echo " > Remove language packages (reduce iso size)..."
-apt-get -y purge gnome-user-docs-de || true
-apt-get -y purge gnome-user-docs-es || true
-apt-get -y purge gnome-user-docs-fr || true
-apt-get -y purge gnome-user-docs-it || true
-#apt-get -y purge gnome-user-docs-pt || true
-apt-get -y purge gnome-user-docs-ru || true
-apt-get -y purge gnome-user-docs-zh-hans || true
-apt-get -y purge hunspell-de-at-frami || true
-apt-get -y purge hunspell-de-ch-frami || true
-apt-get -y purge hunspell-de-de-frami || true
-apt-get -y purge hunspell-en-au || true
-apt-get -y purge hunspell-en-ca || true
-apt-get -y purge hunspell-en-gb || true
-apt-get -y purge hunspell-en-za || true
-apt-get -y purge hunspell-es || true
-apt-get -y purge hunspell-fr || true
-apt-get -y purge hunspell-fr-classical || true
-apt-get -y purge hunspell-it || true
-#apt-get -y purge hunspell-pt-br || true
-#apt-get -y purge hunspell-pt-pt || true
-apt-get -y purge hunspell-ru || true
-apt-get -y purge hyphen-de || true
-apt-get -y purge hyphen-en-ca || true
-apt-get -y purge hyphen-en-gb || true
-#apt-get -y purge hyphen-en-us || true
-apt-get -y purge hyphen-es || true
-apt-get -y purge hyphen-fr || true
-apt-get -y purge hyphen-it || true
-#apt-get -y purge hyphen-pt-br || true
-#apt-get -y purge hyphen-pt-pt || true
-apt-get -y purge hyphen-ru || true
-apt-get -y purge language-pack-de || true
-apt-get -y purge language-pack-de-base || true
-#apt-get -y purge language-pack-en || true
-#apt-get -y purge language-pack-en-base || true
-apt-get -y purge language-pack-es || true
-apt-get -y purge language-pack-es-base || true
-apt-get -y purge language-pack-fr || true
-apt-get -y purge language-pack-fr-base || true
-apt-get -y purge language-pack-gnome-de || true
-apt-get -y purge language-pack-gnome-de-base || true
-#apt-get -y purge language-pack-gnome-en || true
-#apt-get -y purge language-pack-gnome-en-base || true
-apt-get -y purge language-pack-gnome-es || true
-apt-get -y purge language-pack-gnome-es-base || true
-apt-get -y purge language-pack-gnome-fr || true
-apt-get -y purge language-pack-gnome-fr-base || true
-apt-get -y purge language-pack-gnome-it || true
-apt-get -y purge language-pack-gnome-it-base || true
-#apt-get -y purge language-pack-gnome-pt || true
-#apt-get -y purge language-pack-gnome-pt-base || true
-apt-get -y purge language-pack-gnome-ru || true
-apt-get -y purge language-pack-gnome-ru-base || true
-apt-get -y purge language-pack-gnome-zh-hans || true
-apt-get -y purge language-pack-gnome-zh-hans-base || true
-apt-get -y purge language-pack-it || true
-apt-get -y purge language-pack-it-base || true
-#apt-get -y purge language-pack-pt || true
-#apt-get -y purge language-pack-pt-base || true
-apt-get -y purge language-pack-ru || true
-apt-get -y purge language-pack-ru-base || true
-apt-get -y purge language-pack-zh-hans || true
-apt-get -y purge language-pack-zh-hans-base || true
-#apt-get -y purge libreoffice-help-common || true
-apt-get -y purge libreoffice-help-de || true
-apt-get -y purge libreoffice-help-en-gb || true
-#apt-get -y purge libreoffice-help-en-us || true
-apt-get -y purge libreoffice-help-es || true
-apt-get -y purge libreoffice-help-fr || true
-apt-get -y purge libreoffice-help-it || true
-#apt-get -y purge libreoffice-help-pt || true
-#apt-get -y purge libreoffice-help-pt-br || true
-apt-get -y purge libreoffice-help-ru || true
-apt-get -y purge libreoffice-help-zh-cn || true
-apt-get -y purge libreoffice-help-zh-tw || true
-apt-get -y purge libreoffice-l10n-de || true
-apt-get -y purge libreoffice-l10n-en-gb || true
-apt-get -y purge libreoffice-l10n-en-za || true
-apt-get -y purge libreoffice-l10n-es || true
-apt-get -y purge libreoffice-l10n-fr || true
-apt-get -y purge libreoffice-l10n-it || true
-#apt-get -y purge libreoffice-l10n-pt || true
-#apt-get -y purge libreoffice-l10n-pt-br || true
-apt-get -y purge libreoffice-l10n-ru || true
-apt-get -y purge libreoffice-l10n-zh-cn || true
-apt-get -y purge libreoffice-l10n-zh-tw || true
-apt-get -y purge mythes-de || true
-apt-get -y purge mythes-de-ch || true
-apt-get -y purge mythes-en-au || true
-#apt-get -y purge mythes-en-us || true
-apt-get -y purge mythes-es || true
-apt-get -y purge mythes-fr || true
-apt-get -y purge mythes-it || true
-#apt-get -y purge mythes-pt-pt || true
-apt-get -y purge mythes-ru || true
-#apt-get -y purge wbrazilian || true
-#apt-get -y purge wbritish || true
-apt-get -y purge wfrench || true
-apt-get -y purge witalian || true
-apt-get -y purge wngerman || true
-apt-get -y purge wogerman || true
-#apt-get -y purge wportuguese || true
-apt-get -y purge wspanish || true
-apt-get -y purge wswiss || true
+_purge_apt gnome-user-docs-de
+_purge_apt gnome-user-docs-es
+_purge_apt gnome-user-docs-fr
+_purge_apt gnome-user-docs-it
+#_purge_apt gnome-user-docs-pt
+_purge_apt gnome-user-docs-ru
+_purge_apt gnome-user-docs-zh-hans
+_purge_apt hunspell-de-at-frami
+_purge_apt hunspell-de-ch-frami
+_purge_apt hunspell-de-de-frami
+_purge_apt hunspell-en-au
+_purge_apt hunspell-en-ca
+_purge_apt hunspell-en-gb
+_purge_apt hunspell-en-za
+_purge_apt hunspell-es
+_purge_apt hunspell-fr
+_purge_apt hunspell-fr-classical
+_purge_apt hunspell-it
+#_purge_apt hunspell-pt-br
+#_purge_apt hunspell-pt-pt
+_purge_apt hunspell-ru
+_purge_apt hyphen-de
+_purge_apt hyphen-en-ca
+_purge_apt hyphen-en-gb
+#_purge_apt hyphen-en-us
+_purge_apt hyphen-es
+_purge_apt hyphen-fr
+_purge_apt hyphen-it
+#_purge_apt hyphen-pt-br
+#_purge_apt hyphen-pt-pt
+_purge_apt hyphen-ru
+_purge_apt language-pack-de
+_purge_apt language-pack-de-base
+#_purge_apt language-pack-en
+#_purge_apt language-pack-en-base
+_purge_apt language-pack-es
+_purge_apt language-pack-es-base
+_purge_apt language-pack-fr
+_purge_apt language-pack-fr-base
+_purge_apt language-pack-gnome-de
+_purge_apt language-pack-gnome-de-base
+#_purge_apt language-pack-gnome-en
+#_purge_apt language-pack-gnome-en-base
+_purge_apt language-pack-gnome-es
+_purge_apt language-pack-gnome-es-base
+_purge_apt language-pack-gnome-fr
+_purge_apt language-pack-gnome-fr-base
+_purge_apt language-pack-gnome-it
+_purge_apt language-pack-gnome-it-base
+#_purge_apt language-pack-gnome-pt
+#_purge_apt language-pack-gnome-pt-base
+_purge_apt language-pack-gnome-ru
+_purge_apt language-pack-gnome-ru-base
+_purge_apt language-pack-gnome-zh-hans
+_purge_apt language-pack-gnome-zh-hans-base
+_purge_apt language-pack-it
+_purge_apt language-pack-it-base
+#_purge_apt language-pack-pt
+#_purge_apt language-pack-pt-base
+_purge_apt language-pack-ru
+_purge_apt language-pack-ru-base
+_purge_apt language-pack-zh-hans
+_purge_apt language-pack-zh-hans-base
+#_purge_apt libreoffice-help-common
+_purge_apt libreoffice-help-de
+_purge_apt libreoffice-help-en-gb
+#_purge_apt libreoffice-help-en-us
+_purge_apt libreoffice-help-es
+_purge_apt libreoffice-help-fr
+_purge_apt libreoffice-help-it
+#_purge_apt libreoffice-help-pt
+#_purge_apt libreoffice-help-pt-br
+_purge_apt libreoffice-help-ru
+_purge_apt libreoffice-help-zh-cn
+_purge_apt libreoffice-help-zh-tw
+_purge_apt libreoffice-l10n-de
+_purge_apt libreoffice-l10n-en-gb
+_purge_apt libreoffice-l10n-en-za
+_purge_apt libreoffice-l10n-es
+_purge_apt libreoffice-l10n-fr
+_purge_apt libreoffice-l10n-it
+#_purge_apt libreoffice-l10n-pt
+#_purge_apt libreoffice-l10n-pt-br
+_purge_apt libreoffice-l10n-ru
+_purge_apt libreoffice-l10n-zh-cn
+_purge_apt libreoffice-l10n-zh-tw
+_purge_apt mythes-de
+_purge_apt mythes-de-ch
+_purge_apt mythes-en-au
+#_purge_apt mythes-en-us
+_purge_apt mythes-es
+_purge_apt mythes-fr
+_purge_apt mythes-it
+#_purge_apt mythes-pt-pt
+_purge_apt mythes-ru
+#_purge_apt wbrazilian
+#_purge_apt wbritish
+_purge_apt wfrench
+_purge_apt witalian
+_purge_apt wngerman
+_purge_apt wogerman
+#_purge_apt wportuguese
+_purge_apt wspanish
+_purge_apt wswiss
 
 echo " > Remove others packages..."
-apt-get --purge autoremove
+apt-get -y --purge autoremove
