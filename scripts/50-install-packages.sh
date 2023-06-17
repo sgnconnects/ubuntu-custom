@@ -45,4 +45,3 @@ _install_apt hyphen-en-us
 _install_apt hyphen-pt-br
 _install_apt wamerican
 _install_apt wbrazilian
-_install_apt wbritish
