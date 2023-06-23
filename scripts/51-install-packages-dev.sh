@@ -47,6 +47,7 @@ _install_apt openssh-server
 _install_apt ffmpeg
 _install_apt lame
 _install_apt mediainfo
+_install_apt mp3gain
 _install_apt mp3val
 
 # Development
