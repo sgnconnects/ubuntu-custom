@@ -21,5 +21,8 @@ sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/I
 echo " > FIX: use Wayland in GDM..."
 sed -i "s|^[ #]*WaylandEnable=false|WaylandEnable=true|" /etc/gdm3/custom.conf
 
-echo " > Region and language: typing in Portuguese (Brazil) using US international keyboard: double quote key..."
+echo " > Keyboard: typing in Portuguese (Brazil) using US international keyboard: double quote key..."
 sed -i "s|dead_acute,[ ]*dead_diaeresis,[ ]*apostrophe,[ ]*quotedbl|dead_acute, quotedbl|" /usr/share/X11/xkb/symbols/us
+
+echo " > Keyboard: map 'Shift+Backspace' to 'Delete' key..."
+sed -i "s|BackSpace,[ ]*BackSpace|BackSpace, Delete|" /usr/share/X11/xkb/symbols/pc
